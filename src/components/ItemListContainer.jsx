@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react'
+import ItemCount from './ItemCount'
 import ItemList from './ItemList'
+
 
 const ItemListContainer = () => {
 
@@ -20,7 +22,8 @@ useEffect(()=>{
 
   return(
     <>
-      <ItemList product={product}/>
+      <ItemCount/>
+      <ItemList product={product}/>  
     </>
   )
 }
