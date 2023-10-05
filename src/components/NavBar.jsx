@@ -10,28 +10,28 @@ const NavBar = () => {
       <Flex bg='#00FF7F'>
       <Box p='4' bg='#00FF7F'>
        <Link to={"/"}>
-          <h2>BeastMode</h2>
+          <img src='./src/assets/bearWhite.png' width='50px'/>
         </Link>
       </Box>
   <Spacer />
       <Box p='4' bg='#00FF7F'>
   <Menu>
-    <MenuButton>
+    <MenuButton className='menu'>
       Menu
     </MenuButton>
-    <MenuList>
-          <MenuItem>
-            <Link to={`/categoria/${"A"}`}>
+    <MenuList className='menud'>
+          <MenuItem >
+            <Link to={`/categoria/${"Categoría A"}`}>
             Categoria A
             </Link>
           </MenuItem>
           <MenuItem>
-          <Link to={`/categoria/${"B"}`}>
+          <Link to={`/categoria/${"Categoría B"}`}>
             Categoria B
             </Link>
           </MenuItem>
           <MenuItem>
-          <Link to={`/categoria/${"C"}`}>
+          <Link to={`/categoria/${"Categoría C"}`}>
             Categoria C
             </Link>
           </MenuItem>

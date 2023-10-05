@@ -1,18 +1,23 @@
 import { Box, Flex } from '@chakra-ui/react'
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
+import bag from '../assets/bag.png'
+
 
 const CartWidget = () => {
+
+  const {cart, totalQuantity, totalCart} = useContext(CartContext)
+ 
+
+
+
+
   return (
   <div>
     <Flex>
-        <Box>
-    <span className="material-symbols-outlined">
-        shopping_cart
-    </span>
-</Box>
-<Box>
-<p>999</p>
-</Box>
+        <img src={bag} width='25px'/>
+        <Box> <p>{totalQuantity}</p> </Box>
+        
 </Flex>
 </div>
   )

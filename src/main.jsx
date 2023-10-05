@@ -4,6 +4,31 @@ import App from './App.jsx'
 import { ChakraProvider } from '@chakra-ui/react'
 import'./main.css'
 
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDKm3h4rMdqU7UmBviJRjlSjn6RvnuG8Qo",
+  authDomain: "beast-mode-e-commerce.firebaseapp.com",
+  projectId: "beast-mode-e-commerce",
+  storageBucket: "beast-mode-e-commerce.appspot.com",
+  messagingSenderId: "761186739364",
+  appId: "1:761186739364:web:5099229f45893e5de37231",
+  measurementId: "G-F52ZXKBB88"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ChakraProvider>
   <App />

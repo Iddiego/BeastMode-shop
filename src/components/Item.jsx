@@ -9,27 +9,22 @@ const Item = ({producto}) => {
 
 
   return (
-        <div>
-  <Flex flexWrap="wrap" justify="center">
-            <Card maxW='sm'>
-  <CardBody>
-      <Image src={producto.imageUrl} borderRadius='lg'/>
-    <Stack mt='6' spacing='3'>
-      <Heading size='md'>{producto.nombre}</Heading>
-      <Text>{producto.descripcion}</Text>
-      <Text color='gray' fontSize='2xl'>$ {producto.precio}</Text>
-    </Stack>
-  </CardBody>
-  <Divider />
-  <CardFooter>
-    <ButtonGroup spacing='2'>
-      <Button variant='solid' bg='#00FF7F' color='white'>
+        <div className="cardItem">
+    <div className="conImg">   
+      <img className="imgUrl" src={producto.imagen}/>
+    <div className="text">
+      <h1>{producto.nombre}</h1>
+      <h5>{producto.categoria}</h5>
+      <h5>{producto.descripcion}</h5>
+      <h2 color='gray' fontSize='2xl'>US${producto.precio}</h2>
+    </div>
+    </div> 
+  <div className="footerCard">
+      <button bg='#00FF7F'>
            <Link to={`/item/${producto.id}`}>Detalle</Link>
-      </Button>
-    </ButtonGroup>
-  </CardFooter>
-</Card>
-</Flex>
+      </button>
+  </div>
+
 
         </div>
     )
