@@ -3,14 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500;900&family=Onest:wght@100&display=swap');
 
 
-
-
-
-
-
-
+#bg {
+    background-color: #242424;
+    object-fit: cover;
+}
 
 /*ITEM LIST*/
+.itemDetail {
+
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 3%;
+
+}
+
+
+
 .itemCent {
     display: flex;
     flex-wrap: wrap;
@@ -96,7 +104,7 @@
 
 .tarjetaP {
     display: flex;
-    width: 20rem;
+    width: 2rem;
     height: auto;
     overflow: hidden;
 }
@@ -445,16 +453,30 @@
 
 .loader {
     margin-top: 15rem;
-    width: 200px;
-    height: 50px;
-    --c:#00FF7F 92%,#0000;
-    background: 
-      radial-gradient(circle 20px at bottom,var(--c)) 0 0,
-      radial-gradient(circle 20px at top   ,var(--c)) 0 100%;
-    background-size: calc(100%/4) 50%;
-    background-repeat: repeat-x;
-    animation: l11 1s infinite;
-  }
-  @keyframes l11 {
-      80%,100% {background-position: calc(100%/3) 0,calc(100%/-3) 100%}
-  }
+  width: 65px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  box-shadow: 0 0 0 3px inset #00FF7F;
+  animation: l5 2.5s infinite;
+}
+.loader:after {
+  animation-delay: -1.25s;
+  border-radius: 0;
+}
+@keyframes l5{
+  0%    {inset:0    35px 35px 0   }
+  12.5% {inset:0    35px 0    0   }
+  25%   {inset:35px 35px 0    0   }
+  37.5% {inset:35px 0    0    0   }
+  50%   {inset:35px 0    0    35px}
+  62.5% {inset:0    0    0    35px}
+  75%   {inset:0    0    35px 35px}
+  87.5% {inset:0    0    35px 0   }
+  100%  {inset:0    35px 35px 0   }
+}

@@ -1,11 +1,9 @@
 import React from "react";
-import {Card, Image, Stack, Text, CardBody, Divider, Button, ButtonGroup, CardFooter, Heading, Flex} from "@chakra-ui/react"
 import { Link } from 'react-router-dom'
 
 
 
 const Item = ({producto}) => {
-  // console.log(producto)
 
 
   return (

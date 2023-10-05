@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar"
 import Cart from "./components/Cart"
 import Form from "./components/Form"
 import CartContext from "./context/CartContext"
-import './style/style.css'
+import './main.css'
 
 
 

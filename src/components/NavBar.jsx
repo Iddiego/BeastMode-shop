@@ -39,7 +39,7 @@ const NavBar = () => {
   </Menu>
   </Box>
     <Spacer />
-      <Box p='4' bg=' #FF3985'>
+      <Box p='4' bg=' #FF3985' color='white'>
         <Link to={"/cart"}>
           <CartWidget/>
         </Link>
